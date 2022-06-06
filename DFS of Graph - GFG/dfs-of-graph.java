@@ -42,13 +42,13 @@ class Solution {
         
         HashSet<Integer> visited = new HashSet<>();
         
-        dfs(V , adj , ans , visited , 0);
+        dfs( adj , ans , visited , 0);
         
         return ans;
         
     }
     
-    public static void dfs(int V, ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ans,HashSet<Integer> visited , int currV){
+    public static void dfs( ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ans,HashSet<Integer> visited , int currV){
         
         if(visited.contains(currV)){
             return ;
@@ -61,7 +61,7 @@ class Solution {
         
         for(int i = 0 ; i<neighours.size() ;i++){
             
-            dfs(V, adj , ans , visited, neighours.get(i));
+            dfs( adj , ans , visited, neighours.get(i));
         }
         
         
