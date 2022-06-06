@@ -40,7 +40,7 @@ class Solution {
         
         ArrayList<Integer> ans = new ArrayList<>();
         
-        HashSet<Integer> visited = new HashSet<>();
+        boolean[] visited = new boolean[V];
         
         dfs( adj , ans , visited , 0);
         
@@ -48,16 +48,16 @@ class Solution {
         
     }
     
-    public static void dfs( ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ans,HashSet<Integer> visited , int currV){
+    public static void dfs( ArrayList<ArrayList<Integer>> adj, ArrayList<Integer> ans,boolean[] visited , int currV){
         
-        if(visited.contains(currV)){
+        if(visited[currV]){
             return ;
         }
         
-        visited.add(currV);
+        visited[currV] = true;
         ans.add(currV);
         
-        List<Integer> neighours = adj.get(currV);
+        // List<Integer> neighours = adj.get(currV);
         
         for(int i = 0 ; i<adj.get(currV).size() ;i++){
             
