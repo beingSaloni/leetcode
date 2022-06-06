@@ -59,9 +59,9 @@ class Solution {
         
         List<Integer> neighours = adj.get(currV);
         
-        for(int i = 0 ; i<neighours.size() ;i++){
+        for(int i = 0 ; i<adj.get(currV).size() ;i++){
             
-            dfs( adj , ans , visited, neighours.get(i));
+            dfs( adj , ans , visited, adj.get(currV).get(i));
         }
         
         
