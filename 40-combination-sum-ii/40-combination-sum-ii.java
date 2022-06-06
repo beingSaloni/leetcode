@@ -17,10 +17,10 @@ class Solution {
         
         if(t==0){
             
-            if(!outer.contains(inner)){
+           
                 
                 outer.add(new ArrayList<>(inner));
-            }
+            
             
             
             return;
