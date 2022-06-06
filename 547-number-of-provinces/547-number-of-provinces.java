@@ -11,7 +11,7 @@ class Solution {
             }
             // System.out.println("ii");
             ans++;
-            bfs(visited,isConnected,i);
+            dfs(visited,isConnected,i);
             
         }
         
@@ -20,31 +20,20 @@ class Solution {
         
     }
     
-    public static void bfs( boolean[] visited , int[][] isConnected , int vertex){
+    public static void dfs( boolean[] visited , int[][] isConnected , int vertex){
         
-        Queue<Integer> q = new LinkedList<>();
+       if(visited[vertex]){
+            return;
+       }
         
-        q.add(vertex);
+        visited[vertex] = true;
         
-        while(q.size() > 0){
+        for(int i = 0 ; i < isConnected.length ; i++){
             
-            int temp= q.poll();
-            // System.out.println(temp);
-            if(visited[temp] == true){
-                continue;
-            }
-            
-            visited[temp] = true ;
-             
-            for(int i = 0 ; i < isConnected.length ;i++){
+            if(isConnected[vertex][i] ==1){
                 
-                if(isConnected[temp][i] == 1){
-                    
-                    if(!visited[i]){
-                    q.add(i);
-                       // System.out.println(i);  
-                    }
-                }
+                dfs(visited,isConnected,i);
+                
             }
             
         }
