@@ -12,18 +12,24 @@ class Solution {
         
     }
     
-    private void dfs(int[][] image, int sr, int sc, int newColor , int oldColor){
+    public static void dfs(int[][] image, int sr , int sc , int newColor , int temp){
         
-        if(sr >= image.length || sc >= image[0].length || sr < 0 || sc <0 || image[sr][sc] != oldColor ){
+        if(sr >= image.length || sc >= image[0].length || sr < 0 || sc < 0){
             
             return ;
         }
         
-        image[sr][sc]= newColor ;
+        if(image[sr][sc] != temp){
+            return ;
+        }
         
-        dfs(image,sr+1,sc,newColor,oldColor);
-        dfs(image,sr-1,sc,newColor,oldColor);
-        dfs(image,sr,sc+1,newColor,oldColor);
-        dfs(image,sr,sc-1,newColor,oldColor);
+        image[sr][sc]= newColor;
+        
+        dfs(image,sr+1,sc,newColor,temp);
+        dfs(image,sr-1,sc,newColor,temp);
+        dfs(image,sr,sc-1,newColor,temp);
+        dfs(image,sr,sc+1,newColor,temp);
+        
+        
     }
 }
