@@ -60,7 +60,7 @@ class Solution {
             
             if(!visited[adj.get(index).get(i)]){
                 
-            // check[adj.get(index).get(i)] = true;
+            check[adj.get(index).get(i)] = true;
             
             if(dfs(visited,adj,check,adj.get(index).get(i))){
                 
