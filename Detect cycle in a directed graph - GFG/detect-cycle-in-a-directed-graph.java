@@ -68,7 +68,7 @@ class Solution {
             }
             }
             
-            else if(check[adj.get(index).get(i)]){
+            if(check[adj.get(index).get(i)]){
                 return true;
             }
             
