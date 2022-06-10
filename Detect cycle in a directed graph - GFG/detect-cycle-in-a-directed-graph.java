@@ -33,53 +33,56 @@ class DriverClass {
 class Solution {
     // Function to detect cycle in a directed graph.
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
+        // code here
+        
+        int[] inDegree = new int[V];
+        
+        Queue<Integer> q = new LinkedList<>();
+        
+        int visitedVertex = 0;
         
         boolean[] visited = new boolean[V];
+        
+        for(int j = 0 ; j<V ; j++){
+             
+        for(int i = 0 ; i<adj.get(j).size() ; i++){
+            
+            inDegree[adj.get(j).get(i)]++;
+            
+        }
+        
+        }
+        
         for(int i = 0 ; i<V ; i++){
             
-            if(!visited[i]){
-               if(dfs(visited,adj,new boolean[V] , i)){
-                   return true;
-               }
+            if(inDegree[i] == 0){
+                q.add(i);
+            }
+        }
+        
+        while(q.size() > 0){
+            
+            int currV = q.poll();
+            
+            if(visited[currV]){
+                continue;
             }
             
+            visited[currV]=true;
+            
+             visitedVertex++;
+            
+            for(int currNeigh : adj.get(currV)){
+                inDegree[currNeigh]-- ;
+                
+                if(inDegree[currNeigh]==0){
+                    q.add(currNeigh);
+                }
+            }
+            
+            
         }
-       
-       return false; 
-        // code here
+        
+        return !(visitedVertex== V) ;
     }
-    
-     public static boolean dfs(boolean[] visited,ArrayList<ArrayList<Integer>> adj , boolean[] check, int index ){
-        
-       
-        
-        visited[index]=true;
-        check[index] = true;
-       
-        for(int i = 0 ; i<adj.get(index).size() ; i++){
-            
-            if(!visited[adj.get(index).get(i)]){
-                
-            check[adj.get(index).get(i)] = true;
-            
-            if(dfs(visited,adj,check,adj.get(index).get(i))){
-                
-                return true;
-            }
-            }
-            
-            if(check[adj.get(index).get(i)]){
-                return true;
-            }
-            
-        }
-        
-        check[index] = false;
-        
-        return false;
-        
-    } 
-    
-    
-    
 }
