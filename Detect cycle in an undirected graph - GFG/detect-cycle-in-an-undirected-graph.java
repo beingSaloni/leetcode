@@ -33,52 +33,84 @@ class GFG {
 
 class Solution {
     // Function to detect cycle in an undirected graph.
+    
+    public static class Pair{
+        
+        int parent ;
+        int vertex ;
+        
+        Pair(int P , int V){
+            
+            P = parent ;
+            V =vertex;
+            
+        }
+    }
+    
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
         
         boolean[] visited = new boolean[V];
+        int[] parents = new int[V];
+        Arrays.fill(parents,-1);
         
         for(int i = 0 ; i<V ; i++){
-            
-            if(!visited[i]){
-                
-                if(detectCycle(i, adj , -1, visited)){
-                    
-                    return true;
-                }
-                
+            if(!visited[i] && detectCycle(i, adj , -1, visited , parents)){
+               return true;
             }
-            
-            
-            
         }
-        
         return false;
-        
-        
     }
     
-    public static boolean detectCycle(int V, ArrayList<ArrayList<Integer>> adj, int parent,boolean[] visited){
+    public static boolean detectCycle(int V, ArrayList<ArrayList<Integer>> adj, int parent,boolean[] visited, int[] parents){
         
-        visited[V]= true;
-
         
-        for(int i = 0 ; i<adj.get(V).size() ; i++){
+        Queue<Integer> q = new LinkedList<>();
+        q.add(V);
+        visited[V]=true;
+        
+        while(q.size() > 0){
             
-            if(!visited[adj.get(V).get(i)]){
+            int currV = q.poll();
+            
+            for(int i = 0 ; i < adj.get(currV).size() ; i++){
                 
-                if(detectCycle(adj.get(V).get(i),adj, V , visited)){
+                int neigh = adj.get(currV).get(i);
+                
+                if(!visited[neigh]){
+                    
+                    visited[neigh] = true;
+                    parents[neigh] = currV;
+                    q.add(neigh);
+                    
+                }else if( parents[currV] != neigh){
                     
                     return true;
                 }
             }
             
-            else if(adj.get(V).get(i) != parent){
-                
-                return true;
-            }
             
         }
+        
+        
+        // visited[V]= true;
+        
+        // for(int i = 0 ; i<adj.get(V).size() ; i++){
+            
+        //     if(!visited[adj.get(V).get(i)]){
+                
+        //         if(detectCycle(adj.get(V).get(i),adj, V , visited)){
+                    
+        //             return true;
+        //         }
+        //     }
+            
+        //     else if(adj.get(V).get(i) != parent){
+                
+        //         return true;
+        //     }
+            
+        // }
         
         
         return false;
