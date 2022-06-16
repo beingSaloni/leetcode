@@ -3,22 +3,26 @@ class Solution {
         
         int n = nums.length, score = 0, sum = 0, left = 0;
         HashSet<Integer> set = new HashSet<>();
-        for(int right = 0; right < n;){
+        for(int right = 0; right < n; right++){
             
-            if(set.contains(nums[right])){
+            
+            while(set.contains(nums[right])){
                 sum -= nums[left];
                 set.remove(nums[left++]);
-                continue;
+                
             }
             
             sum += nums[right];
             score = Math.max(score, sum);
-            set.add(nums[right++]);
+            set.add(nums[right]);
         }
         
         return score;
     }
 }
+
+// 5 9 3 9 
+//
 
 // 4 2 4 5 6 
 // 4 2 -->
