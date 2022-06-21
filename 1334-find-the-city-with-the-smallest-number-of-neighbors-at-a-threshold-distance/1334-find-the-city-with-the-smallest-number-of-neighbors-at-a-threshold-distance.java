@@ -19,12 +19,12 @@ class Solution {
         
         for(int i = 0 ; i <n ; i++){
             cost[i][i] = 0;
-            for(int j = 0 ; j < n ; j++){
+//             for(int j = 0 ; j < n ; j++){
                 
-                System.out.print(cost[i][j] + " ");
+//                 System.out.print(cost[i][j] + " ");
                 
-            }
-             System.out.println();
+//             }
+//              System.out.println();
             
         }
         
@@ -66,12 +66,12 @@ class Solution {
         
         Arrays.sort(neigh,(a, b) -> b[0]- a[0]);
         
-        for(int i = 0 ; i<n ; i++){
+//         for(int i = 0 ; i<n ; i++){
             
-            System.out.println(neigh[i][1] + " "+ neigh[i][0]);
+//             System.out.println(neigh[i][1] + " "+ neigh[i][0]);
             
             
-        }
+//         }
         
         
         return neigh[neigh.length-1][1];
