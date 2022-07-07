@@ -64,32 +64,30 @@ class Solution {
         
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(V,0));
-        
+        colors[V] = 0;
         
         while(q.size() > 0){
             
-           
+          
             Pair currNode = q.poll();
            
-            
+          
                
-               
+                for(int i = 0; i< graph.get(currNode.value).size() ; i++){
                     
-                    if((colors[currNode.value])==-1){
-                         colors[currNode.value] = currNode.currColor ;
-                        for(int temp : graph.get(currNode.value)){
-                        q.add(new Pair( temp, 1- currNode.currColor));
-                        }
+                    if((colors[graph.get(currNode.value).get(i)])==-1){
+                         colors[graph.get(currNode.value).get(i)] = 1-currNode.currColor ;
+                        q.add(new Pair( graph.get(currNode.value).get(i), 1-currNode.currColor));
                     }else{
                         
-                        if(colors[currNode.value] != currNode.currColor){
-                            // System.out.println(graph.get(currNode.value).get(i));
+                        if(colors[graph.get(currNode.value).get(i)] == currNode.currColor){
+                            System.out.println(graph.get(currNode.value).get(i));
                             return false;
                         }
                         
                     }
                     
-                
+                }
                 
             
                  
