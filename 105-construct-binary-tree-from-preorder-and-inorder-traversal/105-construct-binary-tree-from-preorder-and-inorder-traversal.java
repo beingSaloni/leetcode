@@ -16,44 +16,42 @@
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         
-        int[] rootindex = new int[1];
-        HashMap<Integer,Integer> map = new HashMap<>();
-        for(int j = 0 ; j < preorder.length ;j++){
-            map.put(inorder[j] , j);
-        }
-        return constructtree(preorder , inorder , 0 , preorder.length , rootindex, map );
+        int[] preindex = {0};
+        
+       return solve(preorder,inorder,0,preorder.length-1, preindex);
         
     }
     
-    public static TreeNode constructtree(int[] pre , int[] in , int start , int end , int[] rootindex, HashMap map){
+    public static TreeNode solve(int[] preorder , int[] inorder , int start , int end , int[] index){
         
-        if(start> end || rootindex[0] >= in.length){
+        
+        if(start > end || index[0] >= preorder.length ){
             
             return null;
         }
         
-        
-        TreeNode result = new TreeNode(pre[rootindex[0]]);
-        
-        
-        
-        int i = 0;
-        
-//         for(i = start ; i < end ;i++ ){
+        int i =0;
+        for(i = 0; i < end ; i++){
             
-//             if(in[i]==pre[rootindex[0]]){
-//                 break;
-//             }
-            
-//         }
+            if(preorder[index[0]] == inorder[i]){
+
+              break;
+            }
+        }
         
-       i =(int)map.get(pre[rootindex[0]]);
         
-        rootindex[0]++;
         
-        result.left = constructtree(pre,in,start,i-1 ,rootindex, map);
-        result.right= constructtree(pre,in,i+1,end ,rootindex, map );
+        TreeNode ans = new TreeNode(preorder[index[0]]);
         
-        return result;
+        index[0]++;
+        
+        ans.left = solve(preorder,inorder,start,i-1, index);
+        
+        ans.right= solve(preorder, inorder,i+1 ,end, index) ;
+        
+        return ans;
+        
+        
     }
+    
 }
