@@ -24,14 +24,14 @@ class Solution {
             return 1 ;
         }
         
-        if(start==0 && arr[start] == 0 ){
-            return 0;
-        }
-        if(start -1 >= 0 && arr[start] == 0  && arr[start-1] >= 3){
+//         if(start==0 && arr[start] == 0 ){
+//             return 0;
+//         }
+//         if(start -1 >= 0 && arr[start] == 0  && arr[start-1] >= 3){
             
             
-            return 0;
-        }
+//             return 0;
+//         }
         
         if(memo[start] != 0){
             
