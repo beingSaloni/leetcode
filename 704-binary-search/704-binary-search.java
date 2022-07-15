@@ -8,34 +8,25 @@ class Solution {
         
         int mid = s + (e - s)/2 ;
         
-        if(nums[mid] == t){
-                return mid;
-        }
-        
-        if( e <= s ){
-           return -1 ;
-        }
-        
-        if(s + 1 == e){
-            if(nums[s] == t){
-               return s;
-            }
-            if(nums[e] == t){
-                return e;
-            }
+        if(s>e ){
             return -1;
         }
         
+        if(nums[mid] == t){
+                return mid;
+        }
+    
+        
         if(nums[mid] < t){
-            return bs(nums, t , mid , e);
+            return bs(nums, t , mid+1 , e);
         }
         
-        if(nums[mid]>t){
-            return bs(nums, t, s , mid);
-        }
+      
+            return bs(nums, t, s , mid-1);
         
         
-        return -1;
+        
+        
         
     }
     
