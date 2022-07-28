@@ -21,27 +21,17 @@ class Solution {
             return new TreeNode(val);
         }
         
-        
-        TreeNode ans = new TreeNode(root.val);
-        
         if(val < root.val){
             
-           ans.left = insertIntoBST(root.left , val);
-        }else{
-            
-            ans.left = root.left ;
+           root.left = insertIntoBST(root.left , val);
         }
-        
          if(val > root.val){
             
-           ans.right = insertIntoBST(root.right , val);
-        }else{
-            
-            ans.right = root.right;
+           root.right = insertIntoBST(root.right , val);
         }
         
         
-        return ans;
+        return root;
         
         
         
