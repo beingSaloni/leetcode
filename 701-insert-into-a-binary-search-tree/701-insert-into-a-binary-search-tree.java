@@ -16,24 +16,48 @@
 class Solution {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         
+//         if(root == null){
+            
+//             return new TreeNode(val);
+//         }
+        
+//         if(val < root.val){
+            
+//            root.left = insertIntoBST(root.left , val);
+//         }
+//          if(val > root.val){
+            
+//            root.right = insertIntoBST(root.right , val);
+//         }
+        
+        
+//         return root;
         if(root == null){
-            
-            return new TreeNode(val);
+            return  new TreeNode(val);
         }
         
-        if(val < root.val){
-            
-           root.left = insertIntoBST(root.left , val);
+        TreeNode curr = root ;
+        TreeNode prev = null ;
+        while(curr!= null){
+            prev= curr ;
+            if(curr.val < val){
+                curr = curr.right;
+                
+            }else{
+                
+                curr =curr.left;
+            }
         }
-         if(val > root.val){
-            
-           root.right = insertIntoBST(root.right , val);
+        
+        if(prev.val > val){
+            prev.left =  new TreeNode(val);
+        }else{
+              
+            prev.right = new TreeNode(val);
+        
         }
         
         
-        return root;
-        
-        
-        
+        return root ;
     }
 }
