@@ -57,13 +57,13 @@ class Solution {
                 
                 TreeNode subsNode = findMinNode(root.right);
                 
-                TreeNode temp = null;
+                TreeNode temp = root;
                 
-                temp = root;
+           
                 root.val = subsNode.val ;
                 subsNode.val = temp.val;
                 
-                root.right = deleteNode(root.right ,  subsNode.val );
+                root.right = deleteNode(root.right ,  temp.val );
                 
             }
             
