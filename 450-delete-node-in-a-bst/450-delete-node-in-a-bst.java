@@ -60,7 +60,7 @@ class Solution {
                 TreeNode temp = root;   // temp is allocated root's address 
                 
                 root.val = subsNode.val ; // root is changed so temp will also change
-                subsNode.val = temp.val; // hence no use of this line
+              
                 
                 // root.right = deleteNode(root.right ,  key  ); won't work bcoz key doesn't exist in the tree
                 
