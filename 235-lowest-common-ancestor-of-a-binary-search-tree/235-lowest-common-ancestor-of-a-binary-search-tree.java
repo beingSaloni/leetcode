@@ -19,19 +19,39 @@ class Solution {
         
         
         
-         if(p.val > root.val && q.val > root.val){
+//          if(p.val > root.val && q.val > root.val){
             
-            return solve(root.right , p ,q);
+//             return solve(root.right , p ,q);
+//         }
+        
+//         if(p.val < root.val && q.val < root.val){
+            
+//             return solve(root.left , p ,q);
+//         }
+        
+        TreeNode curr =  root ;
+        while(curr != null){
+            
+            
+   
+            
+             if(p.val > curr.val && q.val > curr.val){
+            
+            curr = curr.right ;
+        }else if(p.val < curr.val && q.val < curr.val){
+                 
+                 
+                 curr = curr.left;
+             }else{
+                 
+                 return curr ;
+             }
+            
         }
         
-        if(p.val < root.val && q.val < root.val){
-            
-            return solve(root.left , p ,q);
-        }
+       
         
-        return root ;
-        
-        
+        return null;
         
         
     }
