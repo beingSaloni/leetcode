@@ -17,10 +17,7 @@ class Solution {
     
     private TreeNode solve(TreeNode root , TreeNode p , TreeNode q){
         
-        if(p.val == root.val || q.val == root.val){
-            
-            return root;
-        }
+        
         
          if(p.val > root.val && q.val > root.val){
             
