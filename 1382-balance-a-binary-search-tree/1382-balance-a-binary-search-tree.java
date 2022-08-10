@@ -36,7 +36,7 @@ class Solution {
         inorder(curr.right, in);
     }
     
-    private TreeNode constrctBST( ArrayList preorder , int start , int end){
+    private TreeNode constrctBST( ArrayList inorder , int start , int end){
         
         if(start > end){
             
@@ -45,11 +45,11 @@ class Solution {
         
         int mid = start + (end - start)/2 ;
         
-        TreeNode ans = new TreeNode((int)preorder.get(mid));
+        TreeNode ans = new TreeNode((int)inorder.get(mid));
         
-        ans.left = constrctBST(preorder , start , mid -1);
+        ans.left = constrctBST(inorder , start , mid -1);
         
-           ans.right = constrctBST(preorder , mid +1 , end);
+           ans.right = constrctBST(inorder , mid +1 , end);
         
         return ans;
         
