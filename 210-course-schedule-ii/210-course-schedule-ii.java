@@ -20,7 +20,7 @@ class Solution {
         }
         
         int[] anss = new int[numCourses];
-        System.out.println(ans.size());
+        // System.out.println(ans.size());
         for(int i = 0 ; i < numCourses ; i++){
             
             anss[i] =  ans.remove(ans.size()-1);
