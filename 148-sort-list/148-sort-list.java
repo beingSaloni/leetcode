@@ -18,19 +18,19 @@ class Solution {
         
           
         
-        ListNode fast = head;
-        ListNode slow = head;
+//         ListNode fast = head;
+//         ListNode slow = head;
         
-        while(fast.next != null && fast.next.next != null ){
-            fast = fast.next.next;
-            slow =slow.next ;
+//         while(fast.next != null && fast.next.next != null ){
+//             fast = fast.next.next;
+//             slow =slow.next ;
             
-        }
+//         }
         
-       
+       ListNode mid = middleNode(head);
         
-        ListNode rightside = slow.next ;
-        slow.next = null ;
+        ListNode rightside = mid.next ;
+        mid.next = null ;
         ListNode leftside = head ;
         
         
@@ -89,25 +89,25 @@ class Solution {
         
     }
     
-//      public ListNode middleNode(ListNode head) {
+     public ListNode middleNode(ListNode head) {
         
-//         if(head==null){
-//             return null;
-//         }
+        if(head==null){
+            return null;
+        }
         
-//         ListNode fast = head;
-//         ListNode slow = head;
+        ListNode fast = head;
+        ListNode slow = head;
         
-//         while(fast.next != null && fast.next.next != null ){
-//             fast = fast.next.next;
-//             slow =slow.next ;
+        while(fast.next != null && fast.next.next != null ){
+            fast = fast.next.next;
+            slow =slow.next ;
             
+        }
+        
+//         if(fast.next != null){
+//             return slow.next;
 //         }
         
-//         // if(fast.next != null){
-//         //     return slow.next;
-//         // }
-        
-//         return slow ;
-//     }
+        return slow ;
+    }
 }
