@@ -1,64 +1,67 @@
 class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         
-         boolean[] visited = new boolean[numCourses];
+        boolean[] visited = new boolean[numCourses];
         
-        boolean[] check = new boolean[numCourses];
+        int[] ans = new int[numCourses];
         
-        ArrayList<Integer> ans = new ArrayList<Integer>();
-        for(int i = 0 ; i<numCourses ;i++){
+        Queue<Integer> q = new LinkedList<>();
+        
+        // 1 ----> 0
+        // 2 ----> 0
+        // 3 ----> 1
+        // 3 ----> 2    
+        
+        int[] inorder = new int[numCourses];
+        
+        for(int i = 0 ; i < prerequisites.length ;i++){
             
-            if(!visited[i]){
-                
-                if(cycles(visited,check,prerequisites, i , ans)){
-                    
-                    return new int[0];
-                }
-                
-            }
+           inorder[prerequisites[i][0]]++;
+            
+        }
+        int c = 0;
+        for(int i = 0 ; i < numCourses ;i++){
+            
+           if(inorder[i] == 0){
+               
+               q.add(i);
+           }
             
         }
         
-        int[] anss = new int[numCourses];
-        // System.out.println(ans.size());
-        for(int i = 0 ; i < numCourses ; i++){
+        while(q.size() > 0){
             
-            anss[i] =  ans.remove(ans.size()-1);
-            
-        }
-       
-        return anss;
-        
-    }
-       public static boolean cycles(boolean[] visited, boolean[] check ,int[][] prerequisites, int V , ArrayList ans){
-        
-        visited[V] = true;
-        check[V] = true;
-        
-        for(int i = 0 ; i < prerequisites.length ; i++ ){
-            
-            if(prerequisites[i][1] == V){
+            int temp = q.poll();
+            visited[temp] = true;
+            ans[c++] =temp ;
+            // System.out.println(temp);
+            for(int i = 0 ; i< prerequisites.length ;i++){
                 
-                if(!visited[prerequisites[i][0]]){
+                if(prerequisites[i][1]== temp ){
                     
-                    if(cycles(visited,check,prerequisites,prerequisites[i][0] , ans)){
+                    if(!visited[prerequisites[i][0]]){
+                        inorder[prerequisites[i][0]]--; 
                         
-                        return true;
+                        if( inorder[prerequisites[i][0]] == 0){
+               
+               q.add(prerequisites[i][0]);
+           }
+                        
                     }
-                }else if(check[prerequisites[i][0]]){
                     
-                    return true;
                 }
                 
             }
             
+        }
+        
+        if(ans.length > 1 && ans[ans.length-1] == 0 && ans[ans.length-2] == 0){
             
-            
+            return new int[0];
             
         }
-        ans.add(V);
-        check[V] = false;
         
-        return false;
+        return ans;
+        
     }
 }
