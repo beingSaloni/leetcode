@@ -50,20 +50,20 @@ class Solution {
         
         ListNode prev = null ;
         
-        ListNode tempNode = null ;
+        ListNode ahead = null ;
         
         ListNode current = head ;
         
         
         
-        while(current != null ){
-            
-           tempNode = current.next ;
-            current.next = prev ;
-            prev = current ;
-            current = tempNode ;
-            
-        }
+       while(current != null){
+           
+           ahead = current.next ;
+           current.next =prev;
+           prev = current ;
+           current = ahead;
+           
+       }
         
        
         
