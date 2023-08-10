@@ -1,59 +1,22 @@
 class Solution {
     public boolean search(int[] nums, int target) {
         
-        return binarysearch(nums,target,0,nums.length-1);
-    }
-    
-      public boolean binarysearch(int[] nums , int target , int start , int end){
-        
-        if(start > end){
+        int smallest = nums[0] ;
+        for(int i = 0 ; i < nums.length ; i++){
             
-            
-            
-            return false;
-        }
-        int mid = start + (end - start)/2 ;
-        
-       if(nums[mid]==target){
-            
-            return true ;
-        }
-          
-          while(start < mid && nums[start] == nums[mid]){
-              
-              start+=1;
-              
-          }
-          if(nums[start] == target){
-                return true ;
-            }
-            if( nums[end] == target){
-                return true ;
-            }
-        
-        // start < nums[mid] 
-        
-        // nums[mid] < end
-        
-        if(nums[start] <= nums[mid] ){
-     // first side is sorted       
-            if(nums[mid] > target && target >= nums[start] ){
-                return binarysearch(nums, target , start , mid-1);
+            if(nums[i] == target){
+                
+                return true;
+
             }
             
-            return  binarysearch(nums, target , mid+1 , end);
-            
-        }
-   // second side is sorted
-        
-        if(nums[mid] < target && target <= nums[end] ){
-            return binarysearch(nums, target , mid+1 , end);
+            if(i+1 < nums.length && nums[i] > nums[i+1] && smallest < target ){
+                
+                return false;
+            }
         }
         
-          return binarysearch(nums, target , start , mid-1);
-        
-        
-        
+        return false;
         
     }
 }
