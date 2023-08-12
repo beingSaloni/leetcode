@@ -1,39 +1,45 @@
 class Solution {
-    public int uniquePathsWithObstacles(int[][] obs) {
-         
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        
+        // either down, right
         HashMap<String,Integer> memo = new HashMap<>();
-       return unique(0,0,obs,memo);
+        
+       return solve(obstacleGrid , 0 ,0 , memo);
+        
     }
     
-    public static int unique(int r ,int c , int[][] obs ,HashMap memo){
+    private int solve(int[][] obstacleGrid , int row , int col , HashMap memo){
         
+        String val = row + " " + col ;
+        if(memo.containsKey(val)){
+            
+            return (int)memo.get(val);
+        }
         
-        if(r >= obs.length || c>= obs[0].length){
+        if(row == obstacleGrid.length-1 && col == obstacleGrid[0].length-1 && obstacleGrid[row][col] == 0 ){
+            // System.out.println(row + " " + col);
+            return 1;
+        }
+        
+         if(row > obstacleGrid.length-1 || col > obstacleGrid[0].length-1){
             
             return 0;
         }
-        if(obs[r][c] == 1){
+        
+        
+        
+        if(obstacleGrid[row][col] == 1){
+            
             return 0;
         }
         
+        int down = solve(obstacleGrid , row+1 , col , memo);
         
-        if(obs.length-1 == r && obs[0].length-1==c){
-            return 1;
-        }
-        String s = r + " " + c;
-        if(memo.containsKey(s)){
-            return (int)memo.get(s);
-        }
+        int up = solve(obstacleGrid , row , col+1 , memo);
         
+        memo.put(val, down + up);
         
-        int right = unique(r , c+1, obs,memo);
+        return down + up ;
         
-        int left = unique(r+1, c,obs,memo);
-        
-        
-        memo.put(s,right+left);
-        return right + left ;
-
     }
-    
 }
