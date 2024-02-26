@@ -1,6 +1,14 @@
 class Solution {
     public void setZeroes(int[][] matrix) {
         
+        // # 0 assume first row and col to act as an indicator to tell us
+        //     in this row/col we have any 1
+        // #1  Scan complete matrix and if any 1's found set first row and col accordingly
+        // #2 after complete scanning, set the complete matric according to 1st row and col
+        // #3 after setting complete matrix, set first col and then row accordingly 
+        
+        
+        
         // storing temp val for first row
         
         int firstRow = -1;
@@ -24,7 +32,7 @@ class Solution {
             
         }
         
-        
+        // using first row aand col values to set the values of complete matrix
         
         for(int r = 1 ; r < matrix.length ; r++){
             
@@ -44,6 +52,8 @@ class Solution {
             
         }
         
+        // setting first row value
+        
          if(matrix[0][0] == 0){
 
             
@@ -54,6 +64,7 @@ class Solution {
             
         }}
         
+        // setting first col value
         
         if(firstRow == 0){
 
