@@ -24,7 +24,7 @@ class Solution {
             
         }
         
-        System.out.println(matrix.length + " " + matrix[0].length);
+        
         
         for(int r = 1 ; r < matrix.length ; r++){
             
