@@ -16,37 +16,36 @@
 class Solution {
     public int sumOfLeftLeaves(TreeNode root) {
         
-       return solve(root);
+        return solve(root , 0);
         
     }
-    public int solve(TreeNode root){
+    
+    public int solve(TreeNode root , int check){
         
-        Queue<TreeNode> q = new LinkedList<>();
-        
-        q.add(root);
-        
-        int ans  = 0;
-        
-        while(q.size() > 0){
-            
-            
-            int count = q.size();
-            while(count-- > 0){
-                TreeNode temp = q.poll();
-            if(temp.left!=null){
-                q.add(temp.left);
-                if(temp.left.left == null && temp.left.right==null){
-                    ans+=temp.left.val;
-                }
-            }
-            if(temp.right!=null){
-                q.add(temp.right);
-            }
-            }   
-            
+        if(root == null){
+            return 0;
         }
         
-        return ans;
+        
+        
+        if(root.left == null && root.right == null ){
+            
+            if(check ==1){
+                
+                return root.val;
+
+            }
+           
+            return 0;
+            
+           
+            
+        }
+        // System.out.println(solve(root.right));
+        
+        return solve(root.left , 1) + solve(root.right , 0);
+        
+        
         
     }
 }
