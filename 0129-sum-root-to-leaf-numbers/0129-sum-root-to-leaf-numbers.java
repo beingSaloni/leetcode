@@ -16,39 +16,67 @@
 class Solution {
     public int sumNumbers(TreeNode root) {
         
-        return  solve(root , "" );
+       return solve(root);
         
     }
     
-    public int solve(TreeNode root , String s ){
+    public class TreeNodeWithAns{
         
-        if(root == null){
+        TreeNode treeNode;
+        
+        String s ;
+         TreeNodeWithAns() {}
+        TreeNodeWithAns(TreeNode treeNode) {this.treeNode = treeNode ;}
+        TreeNodeWithAns(TreeNode treeNode , String s){
             
-            return 0;
-
+            this.treeNode = treeNode;
+            this.s = s;
         }
-        
-        if(root.left == null && root.right == null){
-            
-            return Integer.parseInt(s + root.val) ;
-        }
-        
-        int left = 0 ;
-        
-        int right = 0;
-        
-        if(root.left!= null){
-        
-         left = solve(root.left , s + root.val);
-        }
-        
-        if(root.right != null){
-         right =  solve(root.right , s + root.val);
-        }
-        
-        return left + right ;
-        
         
     }
     
+    public int solve(TreeNode root){
+        
+        Queue <TreeNodeWithAns> q = new LinkedList<TreeNodeWithAns>();
+                
+        q.add(new TreeNodeWithAns(root , "" + root.val));
+        
+      
+        
+        
+        
+        int ans =0 ;
+        
+        while(q.size() > 0){
+            
+            int tempSize = q.size();
+            
+            while(tempSize-- > 0){
+                
+                TreeNodeWithAns temp = q.poll();
+                
+                if(temp.treeNode.left == null && temp.treeNode.right == null){
+                    
+                    ans+= Integer.parseInt(temp.s);
+                }
+                
+                if(temp.treeNode.left != null){
+                    q.add(new TreeNodeWithAns(temp.treeNode.left , temp.s + temp.treeNode.left.val) );
+                }
+                
+                if(temp.treeNode.right!= null){
+                    q.add(new TreeNodeWithAns(temp.treeNode.right , temp.s + temp.treeNode.right.val));
+                }
+                
+                
+            }
+            
+            
+            
+        }
+        
+        return ans;
+        
+        
+    }
 }
