@@ -18,7 +18,7 @@ class Solution {
         
     String[] ans = new String[1];
         
-        ans[0] = "~";
+        ans[0] = "~"; // dummy value '~' > 'z'
         
         solve(root , "" , ans);
         
