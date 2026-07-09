@@ -42,7 +42,7 @@ public class Codec {
 
         // String[] arr = data.split(",");
 
-        Deque<String> nodes = new LinkedList<>();
+        Queue<String> nodes = new LinkedList<>();
 
         nodes.addAll(Arrays.asList(data.split(","))) ;
 
@@ -50,7 +50,7 @@ public class Codec {
         
     }
 
-    public TreeNode solve2(Deque<String> nodes){
+    public TreeNode solve2(Queue<String> nodes){
 
         String val = nodes.remove();
 
