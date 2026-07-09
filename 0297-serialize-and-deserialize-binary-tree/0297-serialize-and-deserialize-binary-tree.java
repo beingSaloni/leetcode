@@ -37,32 +37,31 @@ public class Codec {
         
     }
 
+    int idx = 0;
+
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
 
         String[] arr = data.split(",");
 
-        return solve2(arr , new int[1]);
+        return solve2(arr);
         
     }
 
-    public TreeNode solve2(String[] arr , int[] i){
+    public TreeNode solve2(String[] arr ){
+        
+        int i = idx++;
 
-        if(arr[i[0]].equals("X")){
+        if(arr[i].equals("X")){
             return null ;
         }
 
         
 
-        TreeNode node = new TreeNode(Integer.valueOf(arr[i[0]]));
+        TreeNode node = new TreeNode(Integer.valueOf(arr[i]));
 
-        i[0] = i[0] + 1;
-        
-
-        node.left = solve2(arr , i);
-
-         i[0] = i[0] + 1;
-        node.right =solve2(arr,i);
+        node.left = solve2(arr );
+        node.right =solve2(arr);
 
         return node;
 
