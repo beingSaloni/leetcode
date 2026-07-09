@@ -1,6 +1,9 @@
 class Solution {
     public int networkDelayTime(int[][] times, int n, int k) {
 
+
+       // The Bellman-Ford algorithm is a powerful tool for finding shortest paths from a single source. It is particularly robust because it can handle graphs with negative edge weights (unlike Dijkstra). The core concept is Relaxation: by checking all edges times, we propagate the shortest distance information across the entire network. Think of it like a water ripples expanding from the source; each iteration allows the "water" to travel one edge further to reach all possible nodes.
+
         int[] dist = new int[n+1];
 
         Arrays.fill(dist , Integer.MAX_VALUE);
