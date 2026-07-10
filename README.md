@@ -44,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0046-permutations](https://github.com/beingSaloni/leetcode/tree/master/0046-permutations) |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/beingSaloni/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 ## Backtracking
 |  |
@@ -56,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/beingSaloni/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 ## Trie
 |  |
