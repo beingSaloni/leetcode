@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/beingSaloni/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 ## Tree
 |  |
@@ -43,8 +44,25 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0046-permutations](https://github.com/beingSaloni/leetcode/tree/master/0046-permutations) |
+| [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 ## Backtracking
 |  |
 | ------- |
 | [0046-permutations](https://github.com/beingSaloni/leetcode/tree/master/0046-permutations) |
+## Hash Table
+|  |
+| ------- |
+| [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
+## Trie
+|  |
+| ------- |
+| [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
+## Memoization
+|  |
+| ------- |
+| [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 <!---LeetCode Topics End-->
