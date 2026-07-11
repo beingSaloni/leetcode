@@ -16,11 +16,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/beingSaloni/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0743-network-delay-time](https://github.com/beingSaloni/leetcode/tree/master/0743-network-delay-time) |
+| [2685-count-the-number-of-complete-components](https://github.com/beingSaloni/leetcode/tree/master/2685-count-the-number-of-complete-components) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/beingSaloni/leetcode/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0743-network-delay-time](https://github.com/beingSaloni/leetcode/tree/master/0743-network-delay-time) |
+| [2685-count-the-number-of-complete-components](https://github.com/beingSaloni/leetcode/tree/master/2685-count-the-number-of-complete-components) |
 ## Design
 |  |
 | ------- |
@@ -35,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0743-network-delay-time](https://github.com/beingSaloni/leetcode/tree/master/0743-network-delay-time) |
+| [2685-count-the-number-of-complete-components](https://github.com/beingSaloni/leetcode/tree/master/2685-count-the-number-of-complete-components) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
@@ -79,4 +82,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0703-kth-largest-element-in-a-stream](https://github.com/beingSaloni/leetcode/tree/master/0703-kth-largest-element-in-a-stream) |
+## Union-Find
+|  |
+| ------- |
+| [2685-count-the-number-of-complete-components](https://github.com/beingSaloni/leetcode/tree/master/2685-count-the-number-of-complete-components) |
 <!---LeetCode Topics End-->
