@@ -13,7 +13,7 @@ class Solution {
 
         }
         
-        for(int i = sumodd/2 + 1 ; i > 1; i--){
+        for(int i = sumodd/2  ; i > 1; i--){
 
             if(sumeven % i == 0 && sumodd %i == 0){
 
