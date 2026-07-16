@@ -54,6 +54,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0046-permutations](https://github.com/beingSaloni/leetcode/tree/master/0046-permutations) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/beingSaloni/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0136-single-number](https://github.com/beingSaloni/leetcode/tree/master/0136-single-number) |
 | [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 | [1046-last-stone-weight](https://github.com/beingSaloni/leetcode/tree/master/1046-last-stone-weight) |
 ## Backtracking
@@ -106,4 +107,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/beingSaloni/leetcode/tree/master/3658-gcd-of-odd-and-even-sums) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0136-single-number](https://github.com/beingSaloni/leetcode/tree/master/0136-single-number) |
 <!---LeetCode Topics End-->
