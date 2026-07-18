@@ -58,6 +58,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0136-single-number](https://github.com/beingSaloni/leetcode/tree/master/0136-single-number) |
 | [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 | [1046-last-stone-weight](https://github.com/beingSaloni/leetcode/tree/master/1046-last-stone-weight) |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/beingSaloni/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 ## Backtracking
 |  |
 | ------- |
@@ -104,10 +105,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0066-plus-one](https://github.com/beingSaloni/leetcode/tree/master/0066-plus-one) |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/beingSaloni/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/beingSaloni/leetcode/tree/master/3658-gcd-of-odd-and-even-sums) |
 ## Number Theory
 |  |
 | ------- |
+| [1979-find-greatest-common-divisor-of-array](https://github.com/beingSaloni/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/beingSaloni/leetcode/tree/master/3658-gcd-of-odd-and-even-sums) |
 ## Bit Manipulation
 |  |
