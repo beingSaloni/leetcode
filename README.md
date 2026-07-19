@@ -104,6 +104,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0009-palindrome-number](https://github.com/beingSaloni/leetcode/tree/master/0009-palindrome-number) |
 | [0066-plus-one](https://github.com/beingSaloni/leetcode/tree/master/0066-plus-one) |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/beingSaloni/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/beingSaloni/leetcode/tree/master/3658-gcd-of-odd-and-even-sums) |
