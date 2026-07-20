@@ -58,6 +58,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0136-single-number](https://github.com/beingSaloni/leetcode/tree/master/0136-single-number) |
 | [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 | [1046-last-stone-weight](https://github.com/beingSaloni/leetcode/tree/master/1046-last-stone-weight) |
+| [1260-shift-2d-grid](https://github.com/beingSaloni/leetcode/tree/master/1260-shift-2d-grid) |
 | [1979-find-greatest-common-divisor-of-array](https://github.com/beingSaloni/leetcode/tree/master/1979-find-greatest-common-divisor-of-array) |
 ## Backtracking
 |  |
@@ -117,4 +118,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0136-single-number](https://github.com/beingSaloni/leetcode/tree/master/0136-single-number) |
+## Matrix
+|  |
+| ------- |
+| [1260-shift-2d-grid](https://github.com/beingSaloni/leetcode/tree/master/1260-shift-2d-grid) |
+## Simulation
+|  |
+| ------- |
+| [1260-shift-2d-grid](https://github.com/beingSaloni/leetcode/tree/master/1260-shift-2d-grid) |
 <!---LeetCode Topics End-->
