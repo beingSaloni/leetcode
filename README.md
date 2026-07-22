@@ -52,6 +52,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/beingSaloni/leetcode/tree/master/0001-two-sum) |
 | [0046-permutations](https://github.com/beingSaloni/leetcode/tree/master/0046-permutations) |
 | [0066-plus-one](https://github.com/beingSaloni/leetcode/tree/master/0066-plus-one) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/beingSaloni/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -67,6 +68,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/beingSaloni/leetcode/tree/master/0001-two-sum) |
 | [0139-word-break](https://github.com/beingSaloni/leetcode/tree/master/0139-word-break) |
 | [0424-longest-repeating-character-replacement](https://github.com/beingSaloni/leetcode/tree/master/0424-longest-repeating-character-replacement) |
 ## Dynamic Programming
